@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Tinder"
         tools:targetApi="31">
         <activity
+            android:name=".Choose_Login_And_Reg"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
