@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "265686393021",
+    "firebase_url": "https://datingapp-c9da2-default-rtdb.firebaseio.com",
+    "project_id": "datingapp-c9da2",
+    "storage_bucket": "datingapp-c9da2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265686393021:android:5052e024fd71b99c4797d4",
+        "android_client_info": {
+          "package_name": "com.example.tinder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSovNOUVm-r110fTxyAYDXnnKwhdH44go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
