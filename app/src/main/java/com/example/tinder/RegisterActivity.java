@@ -36,7 +36,9 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioGroup mRadioGroup;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthStateListener;
-    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+";
+
+    private String emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}";
+
     private static final String TAG ="RegisterActivity";
 
     @Override
@@ -82,7 +84,8 @@ public class RegisterActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.TextView2);
 
         checkBox.setText("");
-        textView.setText(Html.fromHtml("I have read and agree to the" + "<a href = 'https://www.blogger.com/blog/post/edit/preview/6711644853096708516/5605643142559263509'> Terms & Conditions</a>"));
+        textView.setText(Html.fromHtml("I have read and agree to the" +
+                "<a href = 'https://www.blogger.com/blog/post/edit/preview/6711644853096708516/5605643142559263509'> Terms & Conditions</a>"));
         textView.setClickable(true);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
