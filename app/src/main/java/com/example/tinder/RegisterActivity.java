@@ -56,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
                 spinner.setVisibility(View.VISIBLE);
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null && user.isEmailVerified()){
-                    Intent intent = new Intent(RegisterActivity.this,MainActivity2.class);
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                     spinner.setVisibility(View.VISIBLE);
@@ -69,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
         existing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, SplashScreenActivity.class);
                 startActivity(intent);
                 finish();
                 return;
