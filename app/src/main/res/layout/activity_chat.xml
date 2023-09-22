@@ -57,6 +57,6 @@
             android:src="@drawable/ic_send_black_24dp"
             android:adjustViewBounds="false"
             android:layout_marginLeft="1dp"/>
-        
+
     </LinearLayout>
 </RelativeLayout>

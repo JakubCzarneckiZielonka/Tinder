@@ -33,7 +33,7 @@ public class BtnLikeActivity extends AppCompatActivity {
 
         switch (profileUrl){
             case "default":
-                Glide.with(mContext).load(R.drawable.ptaki).into(like);
+                Glide.with(mContext).load(R.drawable.profile).into(like);
                 break;
             default:
                 Glide.with(mContext).load(profileUrl).into(like);

@@ -33,7 +33,7 @@ public class BtnDisLikeActivity extends AppCompatActivity {
 
         switch (profileUrl){
             case "default" :
-                Glide.with(mContext).load(R.drawable.ptaki).into(dislike);
+                Glide.with(mContext).load(R.drawable.profile).into(dislike);
                 break;
             default:
                 Glide.with(mContext).load(profileUrl).into(dislike);
