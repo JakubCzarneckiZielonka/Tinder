@@ -27,10 +27,10 @@ public class arrayAdapter extends ArrayAdapter<Cards> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        Cards card_item = getItem(position);
+        Cards matchNeed = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
+            convertView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item, parent, false);
         }
 
         TextView name = convertView.findViewById(R.id.name);
@@ -44,43 +44,43 @@ public class arrayAdapter extends ArrayAdapter<Cards> {
 
         //need image
         if (card_item.getNeed().equals("Netflix")) {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.netflix));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.netflix));
         } else if (card_item.getNeed().equals("Hulu")) {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.hulu));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.hulu));
         } else if (card_item.getNeed().equals("Vudu")) {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.vudu));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vudu));
         } else if (card_item.getNeed().equals("HBO Now")) {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.hbo));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.hbo));
         } else if (card_item.getNeed().equals("Youtube Originals")) {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.youtube));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.youtube));
         } else {
-            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.none));
+            mNeedImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.none));
         }
 
         //give Image
         if (card_item.getGive().equals("Netflix")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.netflix));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.netflix));
         } else if (card_item.getGive().equals("Amazon Prime")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.amazon));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.amazon));
         } else if (card_item.getGive().equals("Hulu")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.hulu));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.hulu));
         } else if (card_item.getGive().equals("Vudu")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.vudu));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vudu));
         } else if (card_item.getGive().equals("HBO Now")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.hbo));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.hbo));
         } else if (card_item.getGive().equals("Youtube Originals")) {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.youtube));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.youtube));
         } else {
-            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.none));
+            mGiveImage.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.none));
         }
 
         switch (card_item.getProfileImageUrl()){
             case "default":
-                Glide.with(convertView.getContext()).load(R.drawable.profile).into(imageView);
+                Glide.with(convertView.getApplicationContext()).load(R.drawable.profile).into(imageView);
                 break;
             default:
                 Glide.clear(imageView);
-                Glide.with(convertView.getContext()).load(card_item.getProfileImageUrl()).into(imageView);
+                Glide.with(convertView.getApplicationContext()).load(card_item.getProfileImageUrl()).into(imageView);
                 break;
         }
         return convertView;
